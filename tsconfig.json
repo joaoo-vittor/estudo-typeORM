@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "target": "ES6",
     "lib": [
       "DOM",
       "ESNext"
@@ -11,6 +10,8 @@
     "rootDir": "src",
     "baseUrl": "src",
     "outDir": "./dist",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "paths": {
       "@/*":  ["*"]
     },
