@@ -1,5 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
-// import { Products } from './product'
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, JoinColumn } from 'typeorm';
+import { Products } from './product'
 
 @Entity({ schema: 'public', name: 'users' })
 export class Users {
@@ -18,7 +18,7 @@ export class Users {
   @Column()
   is_active: boolean;
 
-  // @OneToMany(() => Products, (product) => product.user)
-  // products?: Products[]
+  @OneToMany(() => Products, (product) => product.user)
+  products?: Products[]
 }
 
